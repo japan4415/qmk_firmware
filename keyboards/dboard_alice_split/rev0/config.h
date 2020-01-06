@@ -31,8 +31,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 
 /* key matrix size */
-#define MATRIX_ROWS 5
-#define MATRIX_COLS 16
+#define MATRIX_ROWS 10
+#define MATRIX_COLS 8
 
 /*
  * Keyboard Matrix Assignments
@@ -44,10 +44,10 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *                  ROW2COL = ROW = Anode (+), COL = Cathode (-, marked on diode)
  * { B5, E6, C6, D3, D0, D2, D4, D7, B4, D1 }
 */
-#define MATRIX_ROW_PINS { A2, A1, A0, B1, B3 }
-#define MATRIX_COL_PINS { B2, B6, B5, A3, B4, E6, D7, C6 }
-#define MATRIX_ROW_PINS_RIGHT { A3, A2, A1, D1, D0 }
-#define MATRIX_COL_PINS_RIGHT { A0, B1, B3, B2, B6, B5, B4, E6 }
+#define MATRIX_ROW_PINS { F5, F6, F7, B1, B3 }
+#define MATRIX_COL_PINS { B2, B6, B5, F4, B4, E6, D7, C6 }
+#define MATRIX_ROW_PINS_RIGHT { F4, F5, F6, D7, C6 }
+#define MATRIX_COL_PINS_RIGHT { F7, B1, B3, B2, B6, B5, B4, E6 }
 
 /* COL2ROW, ROW2COL*/
 #define DIODE_DIRECTION COL2ROW
@@ -59,20 +59,20 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #define SPLIT_HAND_PIN D4
 #define MASTER_LEFT
-
+#define SELECT_SOFT_SERIAL_SPEED {0}
 
 // #define BACKLIGHT_PIN B7
 // #define BACKLIGHT_BREATHING
 // #define BACKLIGHT_LEVELS 3
 
-#define RGB_DI_PIN D3
-#ifdef RGB_DI_PIN
-  #define RGBLED_NUM 9
-  #define RGBLIGHT_HUE_STEP 8
-  #define RGBLIGHT_SAT_STEP 8
-  #define RGBLIGHT_VAL_STEP 8
-  #define RGBLIGHT_LIMIT_VAL 255 /* The maximum brightness level */
-  #define RGBLIGHT_SLEEP  /* If defined, the RGB lighting will be switched off when the host goes to sleep */
+// #define RGB_DI_PIN D3
+// #ifdef RGB_DI_PIN
+//   #define RGBLED_NUM 9
+//   #define RGBLIGHT_HUE_STEP 8
+//   #define RGBLIGHT_SAT_STEP 8
+//   #define RGBLIGHT_VAL_STEP 8
+//   #define RGBLIGHT_LIMIT_VAL 255 /* The maximum brightness level */
+//   #define RGBLIGHT_SLEEP  /* If defined, the RGB lighting will be switched off when the host goes to sleep */
 /*== all animations enable ==*/
 //   #define RGBLIGHT_ANIMATIONS
 /*== or choose animations ==*/
@@ -91,7 +91,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
   /*==== use exp() and sin() ====*/
 //   #define RGBLIGHT_EFFECT_BREATHE_CENTER 1.85  // 1 to 2.7
 //   #define RGBLIGHT_EFFECT_BREATHE_MAX    255   // 0 to 255
-#endif
+// #endif
 
 /* Debounce reduces chatter (unintended double-presses) - set 0 if debouncing is not needed */
 #define DEBOUNCE 5
@@ -258,5 +258,5 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 // #define BOOTMAGIC_LITE_ROW 0
 // #define BOOTMAGIC_LITE_COLUMN 0
 
-#define OLED_IC OLED_IC_SH1106
-#define OLED_DISPLAY_128X64	true
+// #define OLED_IC OLED_IC_SH1106
+// #define OLED_DISPLAY_128X64	true
